@@ -33,7 +33,7 @@ pool.connect((err, client, done) => {
 });
 
 // drop table if it exist in our database
-pool.query('DROP TABLE TeamVictor2021', (err, res) => {
+pool.query('DROP TABLE UserVictor2021', (err, res) => {
   if(err) {
       console.log('Table does not exist - or issue with deletion');
    } else {

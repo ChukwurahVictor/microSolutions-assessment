@@ -35,21 +35,16 @@ pool.connect((err, client, done) => {
 
 // insert a record into our table
 pool.query(
-    `INSERT INTO TeamVictor2021 
-                 (ID, NAME, AGE, DEPARTMENT, ROLE, STATUS, CREATEED_DT)
+    `INSERT INTO UserVictor2021 
+                 (ID, FIRSTNAME, LASTNAME, EMAIL, PASSWORD, PHONENUMBER, COUNTRY, BUSINESSNAME, TECHNICALSKILL)
                  VALUES 
-                 ('1', 'Sarah', '5', 'Accounting', 'PM' , 'Activated', '01-01-2020'),
-                 ('2', 'Tim', '10', 'Engineering', 'QA' , 'Pending', '02-01-2020'),          
-                 ('3', 'Joe', '17', 'Management', 'PM' , 'Activated', '02-01-2020'),          
-                 ('4', 'Tolu', '25', 'Management', 'Dev' , 'Pending', '02-01-2020'),          
-                 ('5', 'Rob', '5', 'Engineering', 'QA' , 'Activated', '03-01-2020'),
-                 ('6', 'Ade', '10', 'Management', 'QA' , 'Pending', '04-01-2020'),
-                 ('7', 'Tom', '17', 'Security', 'QA' , 'Activated', '05-01-2020'),
-                 ('8', 'Jide', '26', 'Accounting', 'Dev' , 'Activated', '06-01-2020')
+                 ('1', 'Victor', 'Chukwurah', 'chukwurahvictor7@gmail.com', 'Password123!', '9033893390', 'Nigeria', 'Microsolutions', 'true'),
+                 ('2', 'James', 'Bell', 'bell@gmail.com', 'password345!', '+2348081144335', 'Nigeria', 'bells.inc', 'false' )
                  `,
     (err, res) => {
       if(err) {
         console.log('Error or issue with table creation');
+        console.log(err);
     } else {
         console.log('Inserted data into table successfully')
         console.log(res);
